@@ -130,7 +130,6 @@ function Register({ setPage }) {
                     </div>
                     <div className="form-element form-select">
                         <label htmlFor="select" className="form-label form-select-label" >Event: </label>
-                        {/* <select name="eventSelect" id="select" onChange={(e) => { e.target.value === "Other" ? setValue(true) : setValue(false) }} className="form-select-select"> */}
                         <select name="eventSelect" id="select" value = {value} onChange={(e) => { setValue(e.target.value); setEventSelect(e.target.value); e.target.value === "Other" ? setValue(true) : setValue(false) }} className="form-select-select">
                             <option value="">Please select a event</option>
                             <option value="DiscoverTokyo">Discovering Tokyo's Hidden Gems</option>
