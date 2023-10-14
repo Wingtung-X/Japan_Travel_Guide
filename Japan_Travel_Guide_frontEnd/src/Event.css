@@ -1,0 +1,132 @@
+.event-image{
+    width: 80%;
+}
+.event-events{
+    display: flex;
+    flex-direction: column;
+}
+.events-title{
+    display: flex;
+    flex-direction: column;
+}
+.event-title-title{
+    display: flex;
+    justify-content: center;
+}
+
+.event-title-link{
+    position:absolute;
+    right: 0.5rem;
+    top:200px;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0.5rem;
+    background-color:#CB4042;
+    color: white;
+    text-decoration: none;
+    border-radius: 15px;
+    border: none;
+    font-size: 1.2rem;
+
+}
+
+.event{
+    display: grid;
+    flex-direction: column;
+    justify-content: center;
+    padding:0.5rem;
+    margin:0.5rem;
+    border:5px dashed #CB4042;
+    border-radius: 20px;
+}
+
+.event-title, .event-city, .event-image,.event-content{
+    display: grid;
+    justify-content: center;
+    justify-self: center;
+    padding:0.5rem;
+}
+
+.title-modal{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.title-modal-greet{
+    padding: 0.5rem;
+    display: grid;
+    justify-content: center;
+}
+
+.title-modal-button{
+    height: auto;
+    display: grid;
+    align-self: center;
+    align-content: center;
+    justify-content: center;
+    border:none;
+    background-color: #CB4042;
+    color: white;
+    border-radius: 5px;
+}
+
+.title-modal-modal{
+    border: 2px dashed #CB4042;
+    border-radius: 10px;
+    top:20rem;
+    display: grid;
+    grid-row: auto;
+}
+
+.title-modal-form{
+    display: grid;
+    grid-template-areas: "label input"
+    "error error"
+    "button button";
+}
+
+.title-modal-form-label{
+    grid-area: label;
+    padding:0.5rem;
+}
+
+.title-modal-form-input{
+    grid-area: input;
+    padding:0;
+    height: 1rem;
+    display: flex;
+    align-self: center;
+}
+
+.title-modal-form-error{
+    grid-area: error;
+    display: flex;
+    justify-content: center;
+    color: red;
+}
+
+.title-modal-form-submit{
+    grid-area: button;
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    margin: 0.5rem;
+}
+
+
+
+@media(max-width: 44rem){
+    .event-title-link{
+        top:370px;
+    }
+
+    .events{
+        margin-top: 1.5rem;
+    }
+
+    .title-modal{
+        flex-direction: column;
+    }
+
+}

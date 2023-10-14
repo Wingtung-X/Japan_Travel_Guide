@@ -1,0 +1,82 @@
+.kyoto-title {
+    background-image: url("./kyoto-title-background.jpeg");
+    background-repeat: no-repeat;
+    padding: 2rem;
+    color: white;
+    background-color: black;
+}
+
+.button-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    margin: 0.5rem;
+}
+
+.kyoto-button {
+    width: 20%;
+    border: none;
+    border-radius: 15px;
+    background-color: #AB3B3A;
+    color: white;
+    font-size: 0.7rem;
+    padding: 0.5rem;
+}
+
+.kyoto-cards {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    margin: 0.5rem;
+    justify-content: center;
+}
+
+.kyoto-card {
+    background-color: #cf492b;
+    width: 95%;
+    margin: 0.5rem;
+    grid-column: span 1;
+    /* padding:0.5rem; */
+    display: grid;
+    grid-template-areas: "title"
+        "img"
+        "para";
+    justify-content: center;
+    grid-template-rows: 15% auto 1fr;
+    padding-bottom: 1rem;
+    border-radius: 15px;
+}
+
+.kyoto-card-image {
+    width: 95%;
+    margin: 0.5rem;
+    grid-area: img;
+    border-radius: 15px;
+    display: grid;
+    justify-self: center;
+}
+
+.kyoto-card-title {
+    grid-area: title;
+    margin: 0.5rem;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.kyoto-card-para {
+    grid-area: para;
+    padding: 0.5rem;
+    color: white;
+    margin-top: 0;
+}
+
+
+@media(max-width: 44rem) {
+    .kyoto-cards,.kyoto-card {
+        display: flex;
+        flex-direction: column;
+    }
+
+}

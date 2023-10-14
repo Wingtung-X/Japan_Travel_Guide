@@ -1,0 +1,88 @@
+.cards{
+    display: grid;
+    grid-template-areas:
+    "ginza Kabukicho Ueno"
+    "Sensoji  Roppongi Nakameguro";
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.card-ginza{
+    grid-area: ginza;
+    grid-column: 1/5;
+}
+.card-roppongi{
+    grid-area: Roppongi;
+    grid-column: 5/9;
+}
+.card-ueno{
+    grid-area: Ueno;
+    grid-column: 9/13;
+}
+.card-sensoji{
+    grid-area: Sensoji;
+    grid-column: 1/5;
+}
+.card-kabukicho{
+    grid-area: Kabukicho;
+    grid-column: 5/9;
+}
+.card-nakameguro{
+    grid-area: Nakameguro;
+    grid-column: 9/13;
+}
+
+
+.card {
+    margin: 0.5rem;
+    padding:0.5rem;
+    border-radius: 15px;
+
+    display: grid;
+
+    grid-template-areas:
+        "h2"
+        "img"
+        "para";
+    grid-template-rows: auto auto 1fr;
+    justify-content: center;
+
+    height: 95%;
+    background-color:#FEDFE1 ;
+
+}
+
+
+.card-image{
+    display: grid;
+    justify-content: center;
+    width: 100%;
+    grid-area: img;
+    margin-bottom: auto;
+}
+
+.card-title{
+    display: grid;
+    justify-content: center;
+    grid-area: h2;
+}
+
+.card-p{
+    grid-area: para;
+}
+
+.tokyo-title{
+    background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.3)),url('./home-title-background.jpeg');
+    
+    padding:1rem;
+    margin: 0;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+@media(max-width: 44rem){
+    .cards{
+        display: flex;
+        flex-direction: column;
+    }
+}

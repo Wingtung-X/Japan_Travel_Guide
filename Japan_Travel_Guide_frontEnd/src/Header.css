@@ -1,0 +1,193 @@
+
+header{
+    background-color: #CB4042;
+    margin:0;
+    padding:0;
+
+
+    display: grid;
+    grid-template-areas: "img h1"
+    "nav nav";
+    grid-template-columns: 150px auto;
+    grid-template-rows: 150px auto;
+}
+
+#logo{
+    width: 150px;
+    height: 150px;
+    grid-area: img;
+}
+
+.header-title{
+    display: flex;
+    grid-area: h1;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.header-skiplink{
+    position: absolute;
+    /* left: 50%; */
+    left: 1000000%;
+    color: white;
+
+}
+
+.header-skiplink:focus-within {
+    color: white;
+    left: 50%;
+    text-decoration: none;
+    background-color: #CB4042;
+}
+
+.global-nav{
+    grid-area: nav;
+    width: 100%;
+    display: grid;
+}
+.global-nav-ul{
+    padding:0;
+    margin:0;
+}
+.global-nav-li{
+    list-style: none;
+}
+
+.global-nav {
+    overflow: hidden;
+  }
+
+.global-nav-list{
+    background-color: #c75557;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+    border-bottom:1px solid #c75557;
+}
+
+.global-nav-item{
+    list-style: none;
+    padding:0.5rem;
+}
+
+.global-nav-link{
+    color: white;
+    text-decoration: none;
+    padding:0.5rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.global-nav-link:hover, .global-nav-link:focus-within{
+    color: #c75557;
+    background-color: white;
+}
+
+.nav-button{
+    display: none;
+}
+
+
+
+@media(max-width: 44rem){
+    .nav-button{
+        position: absolute;
+        top: 5rem;;
+        right: 0;
+        display: initial;
+    }
+
+    .global-nav-list{
+        height: 0;
+        overflow: hidden;
+        padding: 0;
+        border:0;
+    }
+
+    .global-nav-item{
+        width: inherit;
+        padding:0;
+        display: none; 
+    }
+
+    .li-open{
+        display: initial;
+    }
+
+    .global-nav-link{
+        display: grid;
+        width: 100%;
+    }
+
+    .nav-open {
+        display: initial;
+        position: absolute;
+        height: 12rem;
+        top: 7rem;
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+        list-style: none;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        width: 6rem;
+        right: 0rem;
+        background-color: #c75557;
+        transition: height 2s;
+        border: none;
+
+    }
+    
+    /* below CSS adapted from https://css.gg under the MIT License */
+    .nav-button {
+        display: initial;
+        position: absolute;
+        right: 0.5rem;
+        width: 20px;
+        top: 6rem;
+        border-radius: 3px;
+        padding: 0;
+        margin: 0;
+        border: 0;
+        height: 4px;
+        background: white;
+    }
+
+    .nav-button::after,
+    .nav-button::before {
+        box-sizing: border-box;
+        position: relative;
+        right: 0.5px;
+        display: block;
+        width: 20px;
+        height: 4px;
+        border-radius: 3px;
+        background: white;
+    }
+
+    .nav-button::after,
+    .nav-button::before {
+        content: "";
+        position: absolute;
+        top: -8px;
+    }
+
+    .nav-button::after {
+        top: 8px;
+    }
+
+
+
+    @media (prefers-reduced-motion: reduce) {
+        .nav-open {
+            transition: none;
+        }
+    }
+
+
+
+}

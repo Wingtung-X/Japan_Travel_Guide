@@ -1,0 +1,8 @@
+.policy{
+    padding:1rem;
+}
+
+.policy-title{
+    display: flex;
+    justify-content: center;
+}

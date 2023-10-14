@@ -1,0 +1,163 @@
+.register {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+#reminder{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.register-title,
+.register-form {
+    display: grid;
+    justify-content: center;
+}
+
+.register-title {
+    background-image: url("./register-title-background.jpeg");
+    background-size: 100%;
+    background-color: black;
+    color: white;
+    margin:0;
+    padding:0.5rem;
+}
+
+.back-button {
+    position: absolute;
+    top: 13rem;
+    right: 5px;
+    background-color: #CB4042;
+    border: none;
+    color: white;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 15px;
+}
+
+.form{
+    display: grid;
+    margin:2rem;
+    grid-template-columns: repeat(12, 1fr);
+    width: 100%;
+}
+
+.form-element{
+    display: grid;
+    grid-column: span 12;
+    margin: 0.5rem;
+}
+
+.form-input,.form-select-select{
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    width: 80%;
+}
+
+.form-error{
+    width: 80%;
+    color:red;;
+}
+
+.form-submit-button{
+    grid-column: 5/7;
+    display: grid;
+    justify-content: center;
+}
+
+.form-select-input{
+    width: 80%;
+}
+
+.modal{
+    width: 50%;
+    display: grid;
+    flex-direction: column;
+    justify-content: center;
+    top: 20rem;
+    border: 3px dashed #CB4042;
+    border-radius: 15px;
+}
+
+.modal-p,.modal-button{
+    display: flex;
+    justify-self: center;
+    justify-content: center;
+    width: 80%;
+}
+
+
+@media (min-width:44rem) {
+  .back-button{
+    top:15rem;
+  }
+
+  .form{
+    grid-template-areas: 
+    "name"
+    "email"
+    "confirm"
+    "select"
+    "button";
+  }
+
+  .form-name{
+    grid-area: name;
+  }
+
+  .form-email{
+    grid-area: email;
+  }
+
+  .form-confirm{
+    grid-area: confirm;
+  }
+  .form-select{
+    grid-area: select;
+  }
+  .form-submit-button{
+    grid-area: button;
+  }
+
+  .form-element{
+    grid-column: span 12;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(2, 1fr)
+  }
+
+  .form-label{
+    grid-column: 2/4;
+    grid-row: 1/2;
+    align-self: center;
+    justify-self: end;
+    padding-right: 0.5rem;
+  }
+
+  .form-input,.form-select-select{
+    grid-column: 4/9;
+    grid-row: 1/2;
+    
+  }
+
+  .form-error{
+    grid-column: span 12;
+    grid-row: 2/3;
+    display: flex;
+    justify-content: center;
+  }
+
+  .form-select-input{
+    grid-column: 4/9;
+    grid-row: 2/3;
+    display: flex;
+    justify-content: center;
+    padding:0;
+  }
+
+  .form-submit-button{
+    grid-area: button;
+    grid-column: 5/7;
+  }
+
+}

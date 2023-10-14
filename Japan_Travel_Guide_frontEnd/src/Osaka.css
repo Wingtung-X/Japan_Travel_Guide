@@ -1,0 +1,155 @@
+.osaka{
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+}
+
+.osaka-title{
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding:1rem;
+    background-image: url('./osaka-title-background.jpeg');
+    background-color: black;
+    background-size: 100%;
+    color: white;
+}
+
+.osaka-card{
+    display: grid;
+    grid-template-rows: 3rem auto 1fr;
+    padding:0.5rem;
+    margin: 0.5rem;
+    border-radius: 15px;
+}
+
+.osaka-card-img{
+    width: 90%;
+}
+
+.osaka-season{
+    display: grid;
+    grid-template-areas: 
+    "title title title"
+    "previous season next";
+    grid-template-rows: auto 1fr;
+    grid-template-columns: 10% auto 10%;
+    align-items: center;
+    /* background-color: #91B493; */
+    padding:0.5rem;
+    justify-items: center;
+}
+
+.osaka-season-title{
+    grid-area: title;
+    background-color: #42602D;
+    color: #FCFAF2;
+    margin: 0;
+    width: 100%;
+}
+
+.osaka-season-cards{
+    grid-area: season;
+    display: grid;
+    justify-content: center;
+}
+
+.button-previous{
+    grid-area: previous;
+}
+
+.button-next{
+    grid-area: next;
+}
+
+.osaka-season-button{
+    height: 2rem;
+    width: 2rem;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    background-color: #B5CAA080;
+    border: none;
+    color:black;
+    border-radius: 100%;
+}
+
+.osaka-season-card{
+    display: grid;
+    justify-content: center;
+    /* padding:0.5rem; */
+    margin-left:0.5rem;
+    margin-right:0.5rem;
+    height: auto;
+    background-color: #B5CAA0;
+    border-radius: 15px;
+}
+
+.osaka-card-title{
+    display: grid;
+    justify-content: center;
+}
+
+.osaka-card-img{
+    display: grid;
+    justify-self: center;
+}
+
+.osaka-card-para{
+    display: grid;
+    justify-content: center;
+    padding: 0.5rem;
+}
+
+.osaka-season-title,.osaka-eat-title{
+    display: grid;
+    justify-content: center;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+
+}
+
+.osaka-season-title{
+    margin-top: 0;
+}
+
+
+
+.osaka-eat{
+    display: grid;
+    grid-template-areas: "cardtitle"
+    "carddiv";
+}
+
+.osaka-eat-title{
+    grid-area: cardtitle;
+}
+
+.osaka-eat-content{
+    grid-area: carddiv;
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+}
+
+.osaka-eat-okonomiyaki,.osaka-eat-takoyaki
+{
+    grid-column: span 6;
+}
+
+.osaka-eat-takoyaki,.osaka-eat-okonomiyaki{
+    background-color: #42602D80;
+}
+
+.osaka-eat-title{
+    background-color: #42602D;
+    color: white;
+}
+
+@media(max-width: 44rem){
+   .osaka-eat-content{
+    display: flex;
+    flex-direction: column;
+   }
+}
+
+

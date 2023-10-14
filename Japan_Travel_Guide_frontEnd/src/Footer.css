@@ -1,0 +1,25 @@
+footer{
+    background-color: #CB4042;
+    display: grid;
+    grid-template-columns: 100px auto;
+}
+.footer-logo{
+    width: 100px;
+    height: 100px;
+}
+
+.footer-nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer-nav-item{
+    list-style: none;
+}
+
+.footer-nav-link{
+    text-decoration: none;
+    color: white;
+}
